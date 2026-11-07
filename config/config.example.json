@@ -1,0 +1,57 @@
+{
+  "_comment": "复制本文件为 config.json 后按自己的环境修改。config.json 已被 .gitignore 排除，不会误提交。所有值都是占位符或公开地址，不含任何真实账号信息。",
+
+  "sites": {
+    "grow":          "https://developer.huaweicloud.com/grow",
+    "harmony_tasks": "https://harmonybp.developer.huaweicloud.com/#practice-tasks",
+    "harmony_cases": "https://harmonybp.developer.huaweicloud.com/cases",
+    "blog_editor":   "https://bbs.huaweicloud.com/blogs/article",
+    "my_blog":       "https://developer.huaweicloud.com/usercenter/mycommunity/blog",
+    "suggestion":    "https://bbs.huaweicloud.com/suggestion",
+    "micro_list":    "https://edu.huaweicloud.com/certification/micro/list?grow",
+    "devspace":      "https://devstation.developer.huaweicloud.com/aidevspace",
+    "competition":   "https://developer.huaweicloud.com/competition/list?utm_source=grow",
+    "gallery":       "https://gallery.developer.huaweicloud.com/gallery/"
+  },
+
+  "browser": {
+    "_comment": "profile_path 填你自己的浏览器用户数据目录；space_name 随便起，用来隔离你自己的页面。",
+    "profile_path": "<你的浏览器用户数据目录>",
+    "space_name": "my-grow-space",
+    "bring_to_front": true,
+    "settle_ms": 9000
+  },
+
+  "board": {
+    "_comment": "可选。默认关闭。要用飞书看板时，enabled 改 true，并填入你自己的 base_token 与四张表的 table_id。",
+    "enabled": false,
+    "base_token": "<BASE_TOKEN>",
+    "table_ids": {
+      "tasks":  "<TABLE_ID>",
+      "dash":   "<TABLE_ID>",
+      "flow":   "<TABLE_ID>",
+      "daily":  "<TABLE_ID>"
+    }
+  },
+
+  "timing": {
+    "_comment": "节奏参数。action_gap_ms 别设成 0，操作间隔太规整容易触发风控。",
+    "page_settle_ms": 9000,
+    "case_dwell_sec": 40,
+    "star_verify_wait_min": 4,
+    "action_gap_ms": 1200,
+    "verify_hour": 6
+  },
+
+  "logging": {
+    "output": "stdout",
+    "_comment": "默认只输出到屏幕，不落盘，避免日志文件里混进个人信息。"
+  },
+
+  "credentials": {
+    "_comment": "只有「发布作品」这条月度任务用得到。只有 env 一个合法值：工具只读环境变量，绝不读文件里的密钥。用完的 STS 凭据即刻销毁。",
+    "mode": "env",
+    "ak_var": "HUAWEICLOUD_SDK_AK",
+    "sk_var": "HUAWEICLOUD_SDK_SK"
+  }
+}
